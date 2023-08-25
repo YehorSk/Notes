@@ -12,7 +12,7 @@ public class Note {
         this.name = name;
         this.text = text;
         Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE LLLL yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
         this.date = simpleDateFormat.format(calendar.getTime()).toString();
 
     }

@@ -3,4 +3,5 @@
     <string name="note_example_text">Lorem ipsum dolor sit amet...</string>
     <string name="note_example_name">Lorem ipsum</string>
     <string name="note_example_date">23.8.2023 19:45</string>
+    <string name="note_example_characters">95 characters</string>
 </resources>

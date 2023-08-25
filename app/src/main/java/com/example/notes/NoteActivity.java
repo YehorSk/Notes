@@ -9,7 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 public class NoteActivity extends AppCompatActivity {
     TextView name;
     TextView text;
-    TextView date;
+    TextView date_characters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,15 +18,17 @@ public class NoteActivity extends AppCompatActivity {
         setUI();
         name.setText(getIntent().getStringExtra("name"));
         text.setText(getIntent().getStringExtra("text"));
-        date.setText(getIntent().getStringExtra("date"));
+        date_characters.setText(getIntent().getStringExtra("date")+" | "+text.length()+" characters");
+
     }
 
     private void setUI(){
         name = findViewById(R.id.name);
         text = findViewById(R.id.text);
-        date = findViewById(R.id.date);
+        date_characters = findViewById(R.id.date);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Note");
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
     }
 }

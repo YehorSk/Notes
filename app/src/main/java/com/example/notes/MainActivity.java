@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,6 +25,13 @@ public class MainActivity extends AppCompatActivity implements AdapterInterface 
         setContentView(R.layout.activity_main);
         fillNotes();
         setUI();
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,AddNoteActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -40,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements AdapterInterface 
 
     private void fillNotes(){
         notes.add(new Note("Lorem ipsum","Lorem ipsum dolor sit amet"));
-        notes.add(new Note("Lorem ipsum","Lorem ipsum dolor sit amet"));
+        notes.add(new Note("Lorem ipsum","Lorem ipsum dolor sit amet amer ipsum"));
     }
 
     @Override
